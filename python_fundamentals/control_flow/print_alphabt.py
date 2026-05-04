@@ -5,4 +5,3 @@ for i in range(ord('a'), ord('z') + 1):
 
     if char != 'q' and char != 'e':
         print("{}".format(char), end="")
-
