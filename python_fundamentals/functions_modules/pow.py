@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 
 def pow(a, b):
+
     if b == 0:
         return 1
 
-    if b < 0:
-        a = 1 / a
-        b = -b
+
+    exposant = b if b > 0 else -b
 
     result = 1
-
-    for i in range(b):
+    for i in range(exposant):
         result = result * a
 
-    return round(result, 2)
+    if b < 0:
+        return 1 / result
+    
+    return result
+    
