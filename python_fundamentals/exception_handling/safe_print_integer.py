@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-
 module who print an integer follow by a new line
 """
 
@@ -14,6 +13,5 @@ def safe_print_integer(value):
         print("{:d}".format(value))  # print asked format
         return True
 
-    except ValueError:
-        print("ValueError")
+    except (ValueError, TypeError):
         return False
