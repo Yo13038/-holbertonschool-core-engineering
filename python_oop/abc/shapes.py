@@ -35,6 +35,17 @@ class Circle(Shape):
     def __init__(self, radius):
         self.radius = radius
 
+    @property
+    def radius(self):
+        return self._radius
+
+    @radius.setter
+    def radius(self, value):
+        if value <= 0:
+            raise ValueError("radius can't be zero or negative")
+
+        self._radius = value
+
     def area(self):
         return math.pi * self.radius ** 2
 
