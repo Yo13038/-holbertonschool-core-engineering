@@ -62,6 +62,26 @@ class Rectangle(Shape):
         self.width = width
         self.height = height
 
+    @property
+    def width(self):
+        return self._width
+
+    @width.setter
+    def width(self, value):
+        if value <= 0:
+            raise ValueError("width can't be zero or negative")
+        self._width = value
+
+    @property
+    def height(self):
+        return self._height
+
+    @height.setter
+    def height(self, value):
+        if value <= 0:
+            raise ValueError("height can't be zero or negative")
+        self._height = value
+
     def area(self):
         return self.width * self.height
 
